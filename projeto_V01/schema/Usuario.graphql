@@ -1,0 +1,23 @@
+type Perfil {
+    id: ID! #! significa que e obrigatorio
+    nome: String!
+}
+#o tipo UsuarioStatus, tem que ter uma das opcoes
+enum UsuarioStatus {
+    ATIVO
+    INATIVO
+    BLOQUEADO
+}
+
+type Usuario {
+        id: ID!
+        nome: String!
+        email: String!
+        idade: Int
+        salario: Float
+        vip: Boolean
+        perfil: Perfil #FK de Perfil
+        status: UsuarioStatus
+    }
+
+
