@@ -2,6 +2,7 @@ type Usuario {
     id: Int
     nome: String!
     email: String!
+    senha: String!
     perfis: [Perfil]
 }
 
@@ -21,6 +22,7 @@ type Perfil {
     id: Int
     nome: String!
     rotulo: String!
+    usuarios: [Usuario]
 }
 
 input PerfilInput {
@@ -31,4 +33,9 @@ input PerfilInput {
 input PerfilFiltro {
     id: Int
     nome: String
+}
+
+type Usuarios_Perfis{
+    usuario_id: Int
+    perfil_id: Int
 }

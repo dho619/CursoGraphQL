@@ -4,4 +4,5 @@ type Query {
     usuario(filtro: UsuarioFiltro!): Usuario
     perfis: [Perfil]
     perfil(filtro: PerfilFiltro!): Perfil
+    usuarios_perfis: [Usuarios_Perfis]
 }
